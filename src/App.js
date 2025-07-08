@@ -8,19 +8,24 @@ import About from './pages/about/About';
 import Contact from './pages/contact/ContactUS';
 import Blog from './pages/blog/Blog';
 import Testimonial from './pages/testimonial/Testimonial';
+import Carousel from "./component/carousel/Carousel";
+import ContactUs from "./pages/contact/ContactUS";
+
 
 const App = () => {
   return (
     <div>
       <Navbar />
+     
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Carousel />} />
         <Route path="/about" element={<About />} />
         <Route path="/furniture" element={<Furniture />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/testimonial" element={<Testimonial />} />
-        <Route path="/contact" element={<Contact />} />
+       
       </Routes>
+      <ContactUs/>
     </div>
   );
 };
